@@ -64,7 +64,7 @@ in
   {
     system ? currentSystem,
     pkgs ? import (getFlake "nixpkgs") {localSystem = {inherit system;};},
-    p ? import (getFlake "fenix") {inherit pkgs;},
+    fenix ? import (getFlake "fenix") {inherit pkgs;},
     rust-manifest ? getRawFlake "rust-manifest",
   }:
     {} // import ./pkgs {inherit pkgs fenix rust-manifest;}
