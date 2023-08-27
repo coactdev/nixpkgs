@@ -1,0 +1,3 @@
+{
+    packages = callPackage ./packages.nix {};
+}
