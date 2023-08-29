@@ -19,7 +19,7 @@ rustPlatform.buildRustPackage rec {
     owner = pname;
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-i95uF7/u7Z781r0HwXvbS8Y09zraIoXRLQNpJCZe6ac=";
+    sha256 = "";
   };
 
   cargoLock = {
