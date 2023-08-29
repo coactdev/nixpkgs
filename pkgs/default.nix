@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   fenix,
   rust-manifest,
 }: let
