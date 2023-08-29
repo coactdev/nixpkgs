@@ -13,7 +13,7 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "cargo-lambda";
-  version = "0.20.3";
+  version = "0.20.4";
 
   src = fetchFromGitHub {
     owner = pname;
