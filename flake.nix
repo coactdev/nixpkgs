@@ -20,14 +20,26 @@
   }: let
     eachSystem = nixpkgs.lib.genAttrs (import systems);
     pkgs = eachSystem (system: (nixpkgs.legacyPackages.${system}.extend fenix.overlays.default));
+
     packagesFn = pkgs:
       import ./default.nix {
         inherit pkgs rust-manifest;
         inherit (pkgs) lib;
         fenix = import fenix {inherit pkgs;};
       };
+
+    packagesFnPatch = pkgs:
+      import ./patch.nix {
+        inherit pkgs rust-manifest;
+        inherit (pkgs) lib;
+        fenix = import fenix {inherit pkgs;};
+      };
+
+
+
   in {
     packages = eachSystem (system: packagesFn pkgs.${system});
     overlays.default = final: prev: packagesFn prev;
+    overlays.patch = final: prev: packagesFnPatch prev;
   };
 }
