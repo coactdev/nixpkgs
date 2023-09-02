@@ -62,6 +62,8 @@ rustPlatform.buildRustPackage rec {
 
   CARGO_LAMBDA_BUILD_INFO = "(nixpkgs.patch)";
 
+  cargoHash = "";
+  
   meta = with lib; {
     description = "A Cargo subcommand to help you work with AWS Lambda";
     homepage = "https://cargo-lambda.info";
