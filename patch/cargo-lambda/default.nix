@@ -3,7 +3,7 @@
 , curl
 , makeRustPlatform
 , fromManifestFile
-, from-manifest
+, rust-manifest
 , makeWrapper
 , pkg-config
 , openssl
