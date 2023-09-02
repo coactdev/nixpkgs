@@ -13,7 +13,7 @@
 rustPlatform.buildRustPackage rec {
   pusername = "coactdev";
   pname = "cargo-lambda";
-  version = "6b11f264f324581a0112dd8cdbd0e125a55369ef";
+  version = "3e4de72a29d48f56f3cacc9d036946a2b1292269";
 
   src = builtins.fetchGit {
     url = "https://github.com/coactdev/cargo-lambda.git";
@@ -27,7 +27,7 @@ rustPlatform.buildRustPackage rec {
       "cargo-test-macro-0.1.0" = "sha256-/ny7R8Ap4m2DLoyH0Qh49rz3tB3RRYmw7tWo0sIUn5I=";
     };
   };
-
+  #https://artemis.sh/2023/07/08/nix-rust-project-with-git-dependencies.html
 
   nativeCheckInputs = [cacert];
 
