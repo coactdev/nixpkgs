@@ -19,7 +19,6 @@ rustPlatform.buildRustPackage rec {
     url = "https://github.com/coactdev/cargo-lambda.git";
     rev = "${version}";
     ref = "dev";
-    sha256 = "sha256-A6pZG4DNqnxaJlBCRURUjNINhAuppdZ0esTDc1oclWw=";
   };
 
   cargoLock = {
