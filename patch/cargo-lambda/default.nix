@@ -16,7 +16,7 @@ rustPlatform.buildRustPackage rec {
   pname = "cargo-lambda";
   version = "6b11f264f324581a0112dd8cdbd0e125a55369ef";
 
-  src = fetchFromGitHub {
+  src = fetchgit {
     owner = pusername;
     repo = pname;
     url = "https://github.com/coactdev/cargo-lambda.git";
