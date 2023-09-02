@@ -12,13 +12,15 @@
 
 
 rustPlatform.buildRustPackage rec {
+  pusername = "coactdev";
   pname = "cargo-lambda";
-  version = "0.20.4";
+  version = "6b11f264f324581a0112dd8cdbd0e125a55369ef";
 
   src = fetchFromGitHub {
-    owner = pname;
+    owner = pusername;
     repo = pname;
-    rev = "v${version}";
+    rev = "${version}";
+    ref = "dev";
     sha256 = "sha256-A6pZG4DNqnxaJlBCRURUjNINhAuppdZ0esTDc1oclWw=";
   };
 
