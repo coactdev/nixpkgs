@@ -2,7 +2,7 @@
 , cacert
 , curl
 , rustPlatform
-, fetchFromGitHub
+, fetchgit
 , makeWrapper
 , pkg-config
 , openssl
