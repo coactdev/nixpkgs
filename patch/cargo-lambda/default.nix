@@ -2,7 +2,6 @@
 , cacert
 , curl
 , rustPlatform
-, fetchGit
 , makeWrapper
 , pkg-config
 , openssl
@@ -16,7 +15,7 @@ rustPlatform.buildRustPackage rec {
   pname = "cargo-lambda";
   version = "6b11f264f324581a0112dd8cdbd0e125a55369ef";
 
-  src = fetchGit {
+  src = builtins.fetchGit {
     url = "https://github.com/coactdev/cargo-lambda.git";
     rev = "${version}";
     ref = "dev";
